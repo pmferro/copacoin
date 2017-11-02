@@ -68,8 +68,8 @@ contract RecuperarClase is Ownable {
         _;
     }
     
-    function voteProposal(uint256 _index) public hasCoins {
-        require(copaCoinContract.spend(1));
+    function voteProposal(uint256 _index) public {
+        //require(copaCoinContract.spend(1));
         proposals[_index].votesCount = proposals[_index].votesCount + 1;
     }
     
